@@ -1,4 +1,6 @@
 ﻿using System.Configuration.Assemblies;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 namespace System.Reflection.Abstractions
 {
@@ -10,6 +12,7 @@ namespace System.Reflection.Abstractions
         public Reflection.Assembly GetAssembly(Type type)
             => Reflection.Assembly.GetAssembly(type);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public Reflection.Assembly GetCallingAssembly()
             => Reflection.Assembly.GetCallingAssembly();
 
