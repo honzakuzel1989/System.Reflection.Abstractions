@@ -43,6 +43,7 @@ namespace System.Reflection.Abstractions
         public Reflection.Assembly LoadFrom(string assemblyFile)
             => Reflection.Assembly.LoadFrom(assemblyFile);
 
+        [Obsolete("This method has been deprecated. Please use Assembly.Load() instead. http://go.microsoft.com/fwlink/?linkid=14202")]
         public Reflection.Assembly LoadWithPartialName(string partialName)
             => Reflection.Assembly.LoadWithPartialName(partialName);
 
